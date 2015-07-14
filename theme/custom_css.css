@@ -1,0 +1,72 @@
+body{
+	background-color:#f5e5b8;
+}
+
+#region-main{
+	background-color:#fff6df;
+	border-radius:4px;
+	padding:10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+
+
+.form-buttons{
+	background-color:#f5e5b8;
+	border-color:black;
+	border-left: 0px;
+	border-right:0px;
+	border-bottom: 1px black solid;
+	border-radius: 0px;
+}
+
+.block .header h2{
+	color:black;
+}
+
+a{
+	color:#742900;
+}
+
+.block{
+	background-color:#f5e5b8;
+	border-color:black;
+	border-left: 0px;
+	border-right:0px;
+	border-radius: 0px;
+}
+
+.breadcrumb{
+	background-color:#f5e5b8;
+}
+
+hr{
+	display:none;
+	border-color: black -moz-use-text-color black;
+}
+
+#page-footer {
+    border-top: 1px solid black;
+}
+
+.coursebox {
+    border: 1px solid black;
+    border-left: 0px;
+	border-right:0px;
+	border-radius: 0px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color:#fff6df;
+}
+
+.courses .coursebox:hover {
+   background-color:#F4E2B3;
+}
+
+.courses .coursebox.even {
+   background-color:#fff6df;
+}
+
+.courses .coursebox.even:hover {
+   background-color:#F4E2B3;
+}
