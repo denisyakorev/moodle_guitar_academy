@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Таблица</title>
+    <meta charset="utf8">
+    <script src="jquery-1.11.2.js"></script>
+    <script src="json2.js"></script>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <input type="checkbox" name="check_all" id="check_all_cb"/>
+            </th>
+            <th>
+                ФИО
+            </th>
+            <th>
+                Дата отправки
+            </th>
+            <th>
+                Материал для отправки
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="1" class="user_checkbox" value="1"/>
+            </td>
+            <td>
+                Человек 1
+            </td>
+            <td>
+                30.02.2014
+            </td>
+            <td>
+                Лекция 1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="2" class="user_checkbox" value="2"/>
+            </td>
+            <td>
+                Человек 2
+            </td>
+            <td>
+                35.02.2014
+            </td>
+            <td>
+                Лекция 2
+            </td>
+        </tr>
+    </table>
+<input type="hidden" name="ids" id="ids"/>
+<input type="button" id="check_all" name="check_all" value="Выделить все"/>
+<input type="button" id="send_data" name="send_data" value="Подтвердить отправку"/>
+
+</body>
+</html>

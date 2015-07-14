@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/dispatch_frequency/db" VERSION="20120925" COMMENT="XMLDB file for Moodle mod/dispatch_frequency"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+        >
+    <TABLES>
+        <TABLE NAME="dispatch_frequency" COMMENT="Defines dispatches" NEXT="dispatch_frequency_settings">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+                <FIELD NAME="user_id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" NEXT="user_fullname" />
+                <FIELD NAME="user_fullname" TYPE="text" LENGTH="small" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="user_id" NEXT="frequency" />
+                <FIELD NAME="frequency" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="user_fullname" NEXT="is_active" />
+                <FIELD NAME="is_active" TYPE="int" LENGTH="2" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="frequency" NEXT="last_dispatch_date" />
+                <FIELD NAME="last_dispatch_date" TYPE="text" LENGTH="small" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="is_active" NEXT="last_dispatch_matherial_id" />
+                <FIELD NAME="last_dispatch_matherial_id" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="last_dispatch_date" NEXT="last_dispatch_matherial_name" />
+                <FIELD NAME="last_dispatch_matherial_name" TYPE="text" LENGTH="small" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="last_dispatch_matherial_id" NEXT="next_dispatch_date" />
+                <FIELD NAME="next_dispatch_date" TYPE="text" LENGTH="small" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="last_dispatch_matherial_name" NEXT="next_dispatch_matherial_id" />
+                <FIELD NAME="next_dispatch_matherial_id" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="next_dispatch_date" NEXT="next_dispatch_matherial_name" />
+                <FIELD NAME="next_dispatch_matherial_name" TYPE="text" LENGTH="small" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="next_dispatch_matherial_id" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key for dispatch_frequency" />
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="dispatch_frequency_settings" COMMENT="Defines settings" PREVIOUS="dispatch_frequency">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+                <FIELD NAME="period_name" TYPE="text" LENGTH="small" NOTNULL="true" SEQUENCE="false" UNSIGNED="false" NEXT="period_length"/>
+                <FIELD NAME="period_length" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" UNSIGNED="false" PREVIOUS="period_name"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="settings for dispatch_frequency" />
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>

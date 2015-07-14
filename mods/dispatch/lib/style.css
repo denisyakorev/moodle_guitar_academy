@@ -1,0 +1,6 @@
+.dispatch_log {
+    border:1px solid black;
+    width:100%;
+}
+.dispatch_log td {border:1px solid black}
+.dispatch_log th {border:1px solid black}
