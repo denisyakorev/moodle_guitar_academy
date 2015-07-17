@@ -14,5 +14,6 @@ $string['pluginadministration'] = 'resending administration';
 $string['pluginname'] = 'resending';
 $string['editButton']='Изменить';
 $string['applyButton']='Принять';
+$string['listHead'] = 'Список учеников';
 
 ?>

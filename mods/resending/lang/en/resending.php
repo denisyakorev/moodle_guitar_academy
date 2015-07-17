@@ -38,6 +38,8 @@ $string['resending'] = 'resending';
 $string['pluginadministration'] = 'resending administration';
 $string['pluginname'] = 'resending';
 $string['fullname']='ФИО';
-$string['frequency']='Частота рассылки, дн.';
 $string['editButton']='Изменить';
 $string['applyButton']='Принять';
+$string['listHead'] = 'Список учеников';
+
+?>

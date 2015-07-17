@@ -34,7 +34,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Example constant, you probably want to remove this :-)
  */
-define('frequency_ULTIMATE_ANSWER', 42);
+define('resending_ULTIMATE_ANSWER', 42);
 
 /* Moodle core API */
 
@@ -46,7 +46,7 @@ define('frequency_ULTIMATE_ANSWER', 42);
  * @param string $feature FEATURE_xx constant for requested feature
  * @return mixed true if the feature is supported, null if unknown
  */
-function frequency_supports($feature) {
+function resending_supports($feature) {
 
     switch($feature) {
         case FEATURE_MOD_INTRO:
@@ -75,17 +75,11 @@ function frequency_supports($feature) {
  * @return int The id of the newly inserted frequency record
  */
 function resending_add_instance(stdClass $resending, mod_resending_mod_form $mform = null) {
-    global $DB;
+   global $DB;
 
-    $resending->timecreated = time();
+    $resending->timemodified = time();
 
-    // You may have to add extra stuff in here.
-
-    $resending->id = $DB->insert_record('resending', $resending);
-
-    resending_grade_item_update($resending);
-
-    return $resending->id;
+    return $DB->insert_record("resending", $resending);
 }
 
 /**
@@ -153,84 +147,3 @@ function resending_delete_instance($id) {
  * @return stdClass|null
  */
 
-/*-----------------------------Мои функции-----------------------------*/
-
-
-//Обновляет данные в таблице dispatch frequency
-function update_frequency_in_dispatch_frequency($userid, $new_frequency){
-    global $DB;
-
-    //Получаем данные о текущей частоте рассылки
-    $cur_frequency = $DB->get_record('dispatch_frequency', array('user_id'=>$userid));
-    //Получаем данные о пользователе
-    $cur_user = $DB->get_record('user', array('id' => $userid));
-
-
-    //Формируем новый объект и заполняем его поля
-    $o_newobject = new StdClass();
-    $o_newobject->id = $cur_frequency->id;
-    $o_newobject->user_id = $cur_user->id;
-    $o_newobject->user_fullname = $cur_user->firstname." ".$cur_user->lastname;
-    $o_newobject->frequency = $new_frequency;
-    $o_newobject->is_active = $cur_frequency->is_active;
-    $o_newobject->last_dispatch_date = $cur_frequency->last_dispatch_date;
-    $o_newobject->last_dispatch_matherial_id = $cur_frequency->last_dispatch_matherial_id;
-    $o_newobject->last_dispatch_matherial_name = $cur_frequency->last_dispatch_matherial_name;
-    $o_newobject->next_dispatch_date = strtotime('+'.$new_frequency.' days', $cur_frequency->last_dispatch_date);
-    $o_newobject->next_dispatch_matherial_id = $cur_frequency->next_dispatch_matherial_id;
-    $o_newobject->next_dispatch_matherial_name = $cur_frequency->next_dispatch_matherial_name;
-
-    //Добавляем объект в базу
-    $DB->update_record('dispatch_frequency', $o_newobject);
-    return true;
-}
-/*
-//Получаем список назначений для очередного курса
-//Назначение - это способ записи на курс, вручную, самостоятельно и т.д. со своим id
-
-function get_enrollments_for_course($course_id){
-    global $DB;
-
-    $sql_string = "SELECT *
-                   FROM `mdl_enrol`
-                   WHERE courseid = ?
-                   ";
-    $params = array($course_id);
-
-    $a_cur_enrollments = $DB->get_records_sql($sql_string, $params);
-
-    return $a_cur_enrollments;
-}
-
-//Получает id записи на курс и возвращает массив записей пользователей, учтенных в этом назначении
-function get_list_of_users_for_enrollment($enrollmentid){
-    global $DB;
-
-    $sql_string = "
-        SELECT *
-        FROM `mdl_user_enrolments`
-        WHERE enrolid = ?
-        ";
-    $params = array($enrollmentid);
-
-    $cur_users = $DB->get_records_sql($sql_string, $params);
-
-    return $cur_users;
-}
-
-
-function addNewRowInfrequency($o_user, $db_link){
-    $user_record = new StdClass();
-    $user_record->user_id = $o_user->id;
-    $user_record->user_fullname = $o_user->firstname." ".$o_user->lastname;
-    $user_record->frequency = 7;
-    $user_record->is_active = 1;
-    $user_record->last_dispatch_date=strtotime('2001-01-01');
-    $user_record->last_dispatch_matherial_id=0;
-    $user_record->last_dispatch_matherial_name=0;
-    $user_record->next_dispatch_date = strtotime('today');
-    $user_record->next_dispatch_matherial_id = 0;
-    $user_record->next_dispatch_matherial_name = 0;
-    $db_link->insert_record('dispatch_frequency', $user_record);
-}
-*/

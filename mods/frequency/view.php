@@ -85,28 +85,6 @@ $current_date = strtotime('today');
 
 //define class for users data
 //Определяем класс для хранения пользовательских данных
-class UserForDispatch{
-    //Свойства класса
-
-    //id пользователя
-    public $userid;
-    //Массив id курсов, на которые записан пользователь
-    public $users_courses = array();
-    //id текущего курса
-    public $current_course;
-    //дата следующей отправки
-    public $next_dispatch_date;
-    //название следующей лекции
-    public $next_lesson_name;
-    //id следущего раздела курса
-    public $next_section_id;
-    //номер номер следующего раздела курса
-    public $next_section_number;
-    //является ли отправка внеплановой
-    public $is_additional;
-    //частота рассылки материала
-    public $dispatch_frequency;
-}
 
 class UsersValue{
     public $userid;
@@ -115,71 +93,7 @@ class UsersValue{
 
 
 
-//from enrollment list get users who has enrollment to nonfree courses
-//in the end of this action we will have list of users. Each item in list will contain list of courses for this user
-
-//Просматриваем таблицу назначений курсов и формируем список пользователей с массивом курсов, на которые они записаны
-
-//define array for enrollments for each course
-//Определяем массив для хранения назначений
-$a_enrollment = array();
-
-//search in DB
-//Перебираем массив платных курсов
-foreach($a_paid_courses as $key=>$value){
-    //Получаем список назначений для очередного курса
-    //Назначение - это способ записи на курс, вручную, самостоятельно и т.д. со своим id
-    $a_cur_enrollments = get_enrollments_for_course($value);
-    //Добавляем список назначений для очередного курса в общий список
-    $a_enrollment = array_merge($a_enrollment, $a_cur_enrollments);
-}
-
-//find users for enrollments
-//Находим пользователей, зарегистрированных на курс каждым из возможных способов
-//define array
-//Определяем массив для хранения записей для пользователей и их курсов
-$a_users_and_their_courses = array();
-
-//search in DB
-//Перебираем список назначений
-foreach($a_enrollment as $key => $value){
-    //echo($key ." : ".$value->id ."<br>");
-    //Получаем список пользователей, зарегистрированных на курс по очередному назначению
-    $a_cur_users = get_list_of_users_for_enrollment($value->id);
-
-    //Объединяем полученный массив пользователей для текущего назначения и общий массив без дублирования пользователей
-    //т.е. каждому пользователю будет соответствовать массив курсов, на которые он записан
-    foreach($a_cur_users as $k => $v){
-        //Определяем флаг
-        $is_dubl = false;
-        //Перебираем всех пользователей в массиве
-        foreach($a_users_and_their_courses as $k2 => $v2){
-            //Если очередной пользователь уже есть в массиве
-            if($v->userid == $v2->userid){
-                //Меняем флаг на "повтор"
-                $is_dubl = true;
-                //Добавляем id курса в массив курсов для пользователя
-                array_push($v2->users_courses, $value->courseid);
-                //и прекращаем цикл
-                break;
-            }
-        }
-        //Если такого пользователя в массиве не было
-        if($is_dubl==false){
-            //Создаем нового пользователя
-            $cur_user = new UserForDispatch();
-            //Заполняем его свойство id
-            $cur_user->userid = $v->userid;
-            //Обозначаем, что этот пользователь идет в общем списке, а не дополнительном
-            $cur_user->is_additional = false;
-            //Добавляем курс в массив курсов пользователя
-            array_push($cur_user->users_courses, $value->courseid);
-            //Добавляем пользователя в общий массив
-            array_push($a_users_and_their_courses, $cur_user);
-        }
-    }
-
-}
+$a_users_and_their_courses = Get_users_array_for_paid_courses($a_paid_courses);
 
 
 //search this user in dispatch frequency table
