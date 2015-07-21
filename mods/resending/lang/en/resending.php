@@ -38,7 +38,10 @@ $string['resending'] = 'resending';
 $string['pluginadministration'] = 'resending administration';
 $string['pluginname'] = 'resending';
 $string['fullname']='ФИО';
-$string['editButton']='Изменить';
+$string['sectionName']='Название лекции';
+$string['courseName']='Название курса';
+$string['editButton']='Отправить повторно';
+$string['sendingNow']='Уже отправляется';
 $string['applyButton']='Принять';
 $string['listHead'] = 'Список учеников';
 

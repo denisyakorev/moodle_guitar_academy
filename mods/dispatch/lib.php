@@ -345,4 +345,41 @@ function Get_user_fullname_from_id($user_id){
 
 }
 
+
+//Функция, которая возвращает название лекции по её ID и ID курса
+function Get_section_name_from_id($section_id,$course_id){
+    global $DB;
+
+    $sql_string = "
+        SELECT *
+        FROM `mdl_course_sections`
+        WHERE course = ?
+        AND section = ?
+    ";
+
+    $params = array((int)$course_id, (int)$section_id);
+
+    $section_data = $DB->get_records_sql($sql_string, $params);
+
+    return $section_data->name;
+}
+
+
+//Функция, которая возвращает название курса по ID
+function Get_course_shortname_from_id($course_id){
+    global $DB;
+
+    $sql_string = "
+        SELECT *
+        FROM `mdl_course`
+        WHERE id = ?
+        ";
+
+    $params = array((int)$course_id);
+
+    $course_data = $DB->get_records_sql($sql_string, $params);
+
+    return $course_data->shortname;
+}
+
 ?>

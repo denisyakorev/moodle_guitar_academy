@@ -100,7 +100,7 @@ $my_content .= '<div class="clear"></div>';
 $my_content .= '</div>';
 $my_content .= '<ul id="list">';
 foreach($a_users_for_list as $key=>$value){
-    $my_content .= '<li><a href="#"><div class="user_unit" id="'.$key.'">'.$value.'</div></a></li>';
+    $my_content .= '<li><a href="'.$CFG->wwwroot.'/mod/resending/create_table.php?userid='.$key.'"><div class="user_unit" id="'.$key.'">'.$value.'</div></a></li>';
 }
 $my_content .= '</ul></div>';
 
