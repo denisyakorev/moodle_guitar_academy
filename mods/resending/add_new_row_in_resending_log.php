@@ -51,7 +51,7 @@ try{
     //Формируем новый объект и заполняем его поля
     $o_new_object = new StdClass();
     $o_new_object -> user_id = $section_data->user_id;
-    $o_new_object->resending_date = strtotime('today');
+    $o_new_object->resending_date = 0;
     $o_new_object->section_id = $section_data->dispatch_session_id;
     $o_new_object->course_id = $section_data->dispatch_course_id;
     //Добавляем его в БД

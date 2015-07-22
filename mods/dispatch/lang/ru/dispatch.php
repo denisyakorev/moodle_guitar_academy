@@ -12,5 +12,6 @@ $string['modulename_link'] = 'mod/dispatch/view';
 $string['modulenameplural'] = 'Dispatch';
 $string['pluginadministration'] = 'Dispatch administration';
 $string['pluginname'] = 'Dispatch';
+$string['resending'] = 'Повторная отправка лекций';
 
 ?>

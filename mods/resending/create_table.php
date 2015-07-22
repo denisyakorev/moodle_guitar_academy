@@ -42,6 +42,7 @@ $sql_string = "
         SELECT *
         FROM `mdl_resending_log`
         WHERE user_id = ?
+        AND resending_date = 0
     ";
 
 $params = array((int)$user_id);

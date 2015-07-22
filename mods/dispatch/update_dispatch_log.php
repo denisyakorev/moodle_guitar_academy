@@ -33,16 +33,20 @@ foreach ($input_data->ids as $value){
 
     //make new row in dispatch log
     try{
-        add_to_dispatch_log($userid, $sectionid);
-        //find out if this section is last in course
-        $next_section = get_next_section_id($sectionid);
-        //if it's last section in course - we should make new row in course completion table
-        if($next_section== -1&&$type_of_record=="normal"){
-            add_to_dispatch_completed_course($userid, $sectionid);
-        }
+
+
         if($type_of_record=="normal"){
+            add_to_dispatch_log($userid, $sectionid);
+            //find out if this section is last in course
+            $next_section = get_next_section_id($sectionid);
+            //if it's last section in course - we should make new row in course completion table
+            if($next_section== -1){
+                add_to_dispatch_completed_course($userid, $sectionid);
+            }
             //update data in dispatch_frequency_data
             update_data_in_dispatch_frequency($userid, $sectionid, $next_section);
+        }else if($type_of_record=="additional"){
+            update_date_in_resending($userid, $sectionid);
         }
     }catch(Ecxeption $e){
         echo $e;

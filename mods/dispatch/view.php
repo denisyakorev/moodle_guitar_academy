@@ -321,6 +321,19 @@ foreach($a_result_users_dispatch as $key=>$value){
 }
 //find person in list of special dispatch
     //if he is - add user again in dispatch array with information about special dispatch
+//Получаем все записи из списка повторной отправки
+$sql_string = "
+        SELECT *
+        FROM `mdl_resending_log`
+        WHERE resending_date = 0
+       ";
+$params = array();
+$resending_arr = $DB->get_records_sql($sql_string, $params);
+
+
+
+
+
 //make table for page
 foreach($a_result_users_dispatch as $key=>$value){
 
@@ -337,6 +350,18 @@ foreach($a_result_users_dispatch as $key=>$value){
     $my_content .= '<td>'.$cur_user->firstname.' '.$cur_user->lastname.'</td>';
     $my_content .= '<td>'.date('d.m.Y',$value->next_dispatch_date).'</td>';
     $my_content .= '<td id="'.$value->next_section_id.'">'.$value->next_lesson_name.'</td>';
+    $my_content .= '</tr>';
+
+}
+//Добавляем строки для повторной отправки
+//$my_content .= '<tr colspan=4>'.get_string('resending', 'dispatch').'</tr>';
+$my_content .= '<tr class="resending"><td colspan="4">Повторная отправка</td></tr>';
+foreach($resending_arr as $key=>$value){
+    $my_content .= '<tr class="additional">';
+    $my_content .= '<td><input type="checkbox" name="'.$value->user_id.'" class="user_checkbox" value="'.$value->user_id.'"/></td>';
+    $my_content .= '<td>'.Get_user_fullname_from_id($value->user_id).'</td>';
+    $my_content .= '<td>'.date('d.m.Y',strtotime('today')).'</td>';
+    $my_content .= '<td id="'.$value->section_id.'">'.Get_section_name_from_id($value->section_id, $value->course_id).'</td>';
     $my_content .= '</tr>';
 
 }

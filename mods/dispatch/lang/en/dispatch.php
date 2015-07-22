@@ -7,11 +7,10 @@
     $string['send_data']='Подтвердить отправку';
     $string['modulename'] = 'Рассылка материалов';
     $string['modulenameplural'] = 'Рассылка материалов';
-
-
-$string['modulename_link'] = 'mod/dispatch/view';
-$string['modulenameplural'] = 'Dispatch';
-$string['pluginadministration'] = 'Dispatch administration';
-$string['pluginname'] = 'Dispatch';
+    $string['modulename_link'] = 'mod/dispatch/view';
+    $string['modulenameplural'] = 'Dispatch';
+    $string['pluginadministration'] = 'Dispatch administration';
+    $string['pluginname'] = 'Dispatch';
+    $string['resending'] = 'Повторная отправка лекций';
 
 ?>

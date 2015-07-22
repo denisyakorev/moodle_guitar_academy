@@ -359,7 +359,7 @@ function Get_section_name_from_id($section_id,$course_id){
 
     $params = array((int)$course_id, (int)$section_id);
 
-    $section_data = $DB->get_records_sql($sql_string, $params);
+    $section_data = $DB->get_record_sql($sql_string, $params);
 
     return $section_data->name;
 }
@@ -377,9 +377,40 @@ function Get_course_shortname_from_id($course_id){
 
     $params = array((int)$course_id);
 
-    $course_data = $DB->get_records_sql($sql_string, $params);
+    $course_data = $DB->get_record_sql($sql_string, $params);
 
     return $course_data->shortname;
+}
+
+//Обновление даты в списке повторной отправки, а значить простановка отметки об отправке
+function update_date_in_resending($userid, $sectionid){
+    global $DB;
+    try{
+        $sql_string = "
+            SELECT *
+            FROM `mdl_resending_log`
+            WHERE user_id = ?
+            AND section_id = ?
+            AND resending_date = 0
+            ";
+
+        $params = array((int)$userid, (int)$sectionid);
+
+        $resending_data = $DB->get_record_sql($sql_string, $params);
+
+        $o_newobject = new StdClass();
+        $o_newobject->id = $resending_data->id;
+        $o_newobject->user_id = $resending_data->user_id;
+        $o_newobject->resending_date = strtotime('today');
+        $o_newobject->section_id = $resending_data->section_id;
+        $o_newobject->course_id = $resending_data->course_id;
+
+        $DB->update_record('resending_log', $o_newobject);
+
+        return true;
+    }catch(Exception $e){
+        echo $e;
+    }
 }
 
 ?>

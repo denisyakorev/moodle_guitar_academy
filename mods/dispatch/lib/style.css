@@ -4,3 +4,14 @@
 }
 .dispatch_log td {border:1px solid black}
 .dispatch_log th {border:1px solid black}
+
+.resending td{
+    background-color:green;
+    color:white;
+    font-weight:bold;
+    text-align: center;
+}
+
+.resending {
+    background-color:green;
+}
