@@ -28,7 +28,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_resending';
-$plugin->version = 2014111004;
+$plugin->version = 2014111005;
 $plugin->release = 'v0.0';
 $plugin->requires = 2014110400;
 $plugin->maturity = MATURITY_ALPHA;

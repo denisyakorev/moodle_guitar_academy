@@ -23,25 +23,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="resending.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lang/en/resending.php">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="20" selection-start="1634" selection-end="1645" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="680">
+            <state line="7" column="22" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_table.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create_table.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.95908546" vertical-offset="308" max-vertical-offset="2907">
+            <state line="33" column="0" selection-start="860" selection-end="860" vertical-scroll-proportion="9.807693" vertical-offset="816" max-vertical-offset="2142">
               <folding>
                 <element signature="e#6#83#0" expanded="true" />
-                <marker date="1437494666625" expanded="true" signature="744:836" placeholder="SELECT * FRO..." />
-                <marker date="1437494666625" expanded="true" signature="1150:1205" placeholder="SELECT * FRO..." />
-                <marker date="1437494666625" expanded="true" signature="1467:1533" placeholder="SELECT * FRO..." />
-                <marker date="1437494666625" expanded="true" signature="1707:1774" placeholder="SELECT * FRO..." />
+                <marker date="1437552393337" expanded="true" signature="786:852" placeholder="SELECT * FRO..." />
+                <marker date="1437552393337" expanded="true" signature="1026:1093" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_new_row_in_resending_log.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_new_row_in_resending_log.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="54" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-15.615385" vertical-offset="478" max-vertical-offset="1309">
+              <folding>
+                <marker date="1437552222084" expanded="true" signature="932:1001" placeholder="SELECT * FRO..." />
               </folding>
             </state>
           </provider>
@@ -74,28 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mod_form.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="78" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1088">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="version.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/version.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="28" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="96" selection-start="4474" selection-end="4474" vertical-scroll-proportion="-11.192307" vertical-offset="1222" max-vertical-offset="2176">
+            <state line="51" column="52" selection-start="2078" selection-end="2247" vertical-scroll-proportion="-19.692308" vertical-offset="134" max-vertical-offset="2176">
               <folding />
             </state>
           </provider>
@@ -104,8 +95,19 @@
       <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="3" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="816">
+            <state line="34" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_table.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/create_table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="36" selection-start="698" selection-end="698" vertical-scroll-proportion="0.43640608" vertical-offset="0" max-vertical-offset="857">
+              <folding>
+                <element signature="e#0#38#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +115,7 @@
       <file leaf-file-name="update_users_frequency.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/update_users_frequency.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="952">
+            <state line="36" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="-18.884615" vertical-offset="121" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
@@ -138,13 +140,16 @@
         <option value="$PROJECT_DIR$/db/access.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/mod_form.php" />
-        <option value="$PROJECT_DIR$/version.php" />
         <option value="$PROJECT_DIR$/db/install.xml" />
         <option value="$PROJECT_DIR$/lib.php" />
-        <option value="$PROJECT_DIR$/view.php" />
         <option value="$PROJECT_DIR$/lang/en/resending.php" />
         <option value="$PROJECT_DIR$/lang/ru/resending.php" />
+        <option value="$PROJECT_DIR$/view.php" />
+        <option value="$PROJECT_DIR$/version.php" />
+        <option value="$PROJECT_DIR$/lib/style.css" />
+        <option value="$PROJECT_DIR$/add_new_row_in_resending_log.php" />
         <option value="$PROJECT_DIR$/create_table.php" />
+        <option value="$PROJECT_DIR$/lib/create_table.js" />
       </list>
     </option>
   </component>
@@ -195,6 +200,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resending" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dispatch_frequency_mod_08022015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resending" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,11 +334,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32717392" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -339,25 +358,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/install.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="3" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="0" selection-start="4713" selection-end="4713" vertical-scroll-proportion="0.0" vertical-offset="2618" max-vertical-offset="3604">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lang/en/resending.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
@@ -566,20 +566,6 @@
         <state line="22" column="43" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/update_users_frequency.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="3" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/ajax/ajaxlib.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="41" selection-start="2921" selection-end="2921" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="1496">
@@ -613,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/install.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="109" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
@@ -634,16 +613,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view.php">
+    <entry file="file://$PROJECT_DIR$/lang/en/resending.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="96" selection-start="4474" selection-end="4474" vertical-scroll-proportion="-11.192307" vertical-offset="1222" max-vertical-offset="2176">
+        <state line="40" column="20" selection-start="1634" selection-end="1645" vertical-scroll-proportion="0.5523466" vertical-offset="0" max-vertical-offset="831">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lang/en/resending.php">
+    <entry file="file://$PROJECT_DIR$/lib/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="20" selection-start="1634" selection-end="1645" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="680">
+        <state line="7" column="22" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
           <folding />
         </state>
       </provider>
@@ -655,15 +634,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/update_users_frequency.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="-18.884615" vertical-offset="121" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="29" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.34777376" vertical-offset="0" max-vertical-offset="831">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="52" selection-start="2078" selection-end="2247" vertical-scroll-proportion="-19.692308" vertical-offset="134" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.95908546" vertical-offset="308" max-vertical-offset="2907">
+        <state line="33" column="0" selection-start="860" selection-end="860" vertical-scroll-proportion="9.807693" vertical-offset="816" max-vertical-offset="2142">
           <folding>
             <element signature="e#6#83#0" expanded="true" />
-            <marker date="1437494666625" expanded="true" signature="744:836" placeholder="SELECT * FRO..." />
-            <marker date="1437494666625" expanded="true" signature="1150:1205" placeholder="SELECT * FRO..." />
-            <marker date="1437494666625" expanded="true" signature="1467:1533" placeholder="SELECT * FRO..." />
-            <marker date="1437494666625" expanded="true" signature="1707:1774" placeholder="SELECT * FRO..." />
+            <marker date="1437552393337" expanded="true" signature="786:852" placeholder="SELECT * FRO..." />
+            <marker date="1437552393337" expanded="true" signature="1026:1093" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_new_row_in_resending_log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="54" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-15.615385" vertical-offset="478" max-vertical-offset="1309">
+          <folding>
+            <marker date="1437552222084" expanded="true" signature="932:1001" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/create_table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="698" selection-end="698" vertical-scroll-proportion="0.43640608" vertical-offset="0" max-vertical-offset="857">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>

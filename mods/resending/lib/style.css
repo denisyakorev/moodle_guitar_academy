@@ -1,6 +1,9 @@
-.dispatch_log {
+.resending_table {
     border:1px solid black;
     width:100%;
 }
-.dispatch_log td {border:1px solid black}
-.dispatch_log th {border:1px solid black}
+.resending_table td {border:1px solid black}
+.resending_table th {
+    border:1px solid black;
+    text-align: center;
+}
